@@ -12,7 +12,7 @@ import Sports from "./Sports";
 import Fitness from "./Fitness";
 import Technology from "./Technology";
 import DataCompo from "../../Store/Store";
-import "./Navbar.css";
+import "./NavBar.css";
 import DynamicCompo from "./DynamicCompo";
 
 const Navbar = () => {
@@ -87,7 +87,7 @@ const Navbar = () => {
           <Route path="/Fitness" element={<Fitness />} />
           <Route path="/Technology" element={<Technology />} />
           {/* Route Structure For Dynamic Route */}
-          <Route path="/dynamic/:id" element={<DynamicCompo/>} />
+          <Route path="/dynamic/:id" element={<DynamicCompo />} />
         </Routes>
       </DataCompo>
     </Router>
