@@ -15,6 +15,7 @@ import Technology from "./Technology";
 import DataCompo from "../../Store/Store";
 import "./NavBar.css";
 import DynamicCompo from "./DynamicCompo";
+import Footer from "../Footer/Footer";
 
 const Navbar = () => {
   const [menuOpen, setMenuopen] = useState(false);
@@ -28,7 +29,9 @@ const Navbar = () => {
     <Router>
       <div className="navbar">
         <div className="menu" onClick={togglemenu}>
-          <i class={menuOpen ? "fa-solid fa-square-xmark" : "fa-solid fa-bars"}></i>
+          <i
+            class={menuOpen ? "fa-solid fa-square-xmark" : "fa-solid fa-bars"}
+          ></i>
         </div>
         <ul className={menuOpen ? "open" : ""}>
           <li>
@@ -72,11 +75,13 @@ const Navbar = () => {
           <Route path="/Sports" element={<Sports />} />
           <Route path="/Fitness" element={<Fitness />} />
           <Route path="/Technology" element={<Technology />} />
-          {/* Route Structure For Dynamic Route */}
+          
           <Route path="/dynamic/:id" element={<DynamicCompo />} />
+          
         </Routes>
+        
       </DataCompo>
-      
+      {/* <Footer/> */}
     </Router>
   );
 };

@@ -61,7 +61,7 @@ const DynamicCompo = () => {
       </div>
       <div className="More-From-siren-container">
         <hr />
-        <h1>MORE FROM THE SIREN</h1>
+        <h1 className="Dynaimic-more-head Headingg">MORE FROM THE SIREN</h1>
        <div className="More-Parentss">
        {randomdata.map((item, index) => (
           <div className="parenttss">

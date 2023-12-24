@@ -322,6 +322,9 @@ img {
   margin: 10px;
   padding: 10px;
 }
+.Dynaimic-more-head{
+  margin: 10px;
+}
 
 
 @media (min-width: 320px) and (max-width: 768px) {

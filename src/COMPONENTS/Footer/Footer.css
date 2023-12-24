@@ -21,10 +21,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-.Child2 h2,.Child3 h2, .Child4 h2:hover{
-  /* color: red; */
-  cursor: pointer;
+
+.Child2 a{
+  text-decoration: none;
+  color: white;
 }
+.Child3 a{
+  text-decoration: none;
+  color: white;
+}
+
 /* h2:hover{
   color: red;
 } */
