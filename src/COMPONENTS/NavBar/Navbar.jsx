@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink,
+  Link,
   Routes,
 } from "react-router-dom";
 import Home from "./Home";
@@ -16,66 +17,51 @@ import "./NavBar.css";
 import DynamicCompo from "./DynamicCompo";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
+  const [menuOpen, setMenuopen] = useState(false);
+  const togglemenu = () => {
+    setMenuopen(!menuOpen);
   };
-
+  const closeMenu = () => {
+    setMenuopen(false);
+  };
   return (
     <Router>
-      <div className={`navbar ${showMenu ? "active" : ""}`}>
-        <div className="menu-toggle" onClick={toggleMenu}>
-          <i className="fas fa-bars"></i>
+      <div className="navbar">
+        <div className="menu" onClick={togglemenu}>
+          <i class={menuOpen ? "fa-solid fa-square-xmark" : "fa-solid fa-bars"}></i>
         </div>
-        <NavLink
-          to="/"
-          style={({ isActive }) => ({ color: isActive ? "red" : "white" })}
-          className="link"
-          onClick={() => setShowMenu(false)}
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/Hollywood"
-          style={({ isActive }) => ({ color: isActive ? "red" : "white" })}
-          className="link"
-          onClick={() => setShowMenu(false)}
-        >
-          Hollywood
-        </NavLink>
-        <NavLink
-          to="/Bollywood"
-          style={({ isActive }) => ({ color: isActive ? "red" : "white" })}
-          className="link"
-          onClick={() => setShowMenu(false)}
-        >
-          Bollywood
-        </NavLink>
-        <NavLink
-          to="/Sports"
-          style={({ isActive }) => ({ color: isActive ? "red" : "white" })}
-          className="link"
-          onClick={() => setShowMenu(false)}
-        >
-          Sports
-        </NavLink>
-        <NavLink
-          to="/Fitness"
-          style={({ isActive }) => ({ color: isActive ? "red" : "white" })}
-          className="link"
-          onClick={() => setShowMenu(false)}
-        >
-          Fitness
-        </NavLink>
-        <NavLink
-          to="/Technology"
-          style={({ isActive }) => ({ color: isActive ? "red" : "white" })}
-          className="link"
-          onClick={() => setShowMenu(false)}
-        >
-          Technology
-        </NavLink>
+        <ul className={menuOpen ? "open" : ""}>
+          <li>
+            <NavLink to="/" onClick={closeMenu}>
+              HOME
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Hollywood" onClick={closeMenu}>
+              HOLLYWOOD
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Bollywood" onClick={closeMenu}>
+              BOLLYWOOD
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Sports" onClick={closeMenu}>
+              SPORTS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Fitness" onClick={closeMenu}>
+              FITNESS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Technology" onClick={closeMenu}>
+              TECHNOLOGY
+            </NavLink>
+          </li>
+        </ul>
       </div>
       <hr />
       <DataCompo>
@@ -90,6 +76,7 @@ const Navbar = () => {
           <Route path="/dynamic/:id" element={<DynamicCompo />} />
         </Routes>
       </DataCompo>
+      
     </Router>
   );
 };

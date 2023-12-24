@@ -17,7 +17,7 @@ const Hollywood = () => {
     <>
       <div className="Main">
         <div className="Left-side">
-          <h2 className="Headingg">HOLLYWOOD</h2>
+          <h2 className="Headingg">TECHNOLOGY</h2>
           {leftSidePosts.map((item, index) => (
             <div key={index} className="Post">
               <div className="Image-Container">

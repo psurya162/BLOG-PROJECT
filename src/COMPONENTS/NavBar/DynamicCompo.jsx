@@ -7,6 +7,7 @@ const DynamicCompo = () => {
 
   const { data } = useContext(Store);
   const Navigatee = useNavigate();
+  const randomdata = data.filter((item) => item.id % 18 === 0);
 
   return (
     <div>
@@ -57,6 +58,25 @@ const DynamicCompo = () => {
             Back
           </button>
         </div>
+      </div>
+      <div className="More-From-siren-container">
+        <hr />
+        <h1>MORE FROM THE SIREN</h1>
+       <div className="More-Parentss">
+       {randomdata.map((item, index) => (
+          <div className="parenttss">
+           <div className="childd">
+            <img src={item.image} alt="" />
+           </div>
+           <div className="childd">
+            <h2>{item.name.slice(0,20)}</h2>
+           </div>
+           <div className="childd">
+            {item.description.slice(0,120)}
+           </div>
+          </div>
+          ))}
+       </div>
       </div>
 
       <hr />
