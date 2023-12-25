@@ -15,7 +15,7 @@ import Technology from "./Technology";
 import DataCompo from "../../Store/Store";
 import "./NavBar.css";
 import DynamicCompo from "./DynamicCompo";
-import Footer from "../Footer/Footer";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuopen] = useState(false);
@@ -26,7 +26,11 @@ const Navbar = () => {
     setMenuopen(false);
   };
   return (
-    <Router>
+
+    <>
+    
+   
+    {/* // <Router> */}
       <div className="navbar">
         <div className="menu" onClick={togglemenu}>
           <i
@@ -81,8 +85,9 @@ const Navbar = () => {
         </Routes>
         
       </DataCompo>
-      {/* <Footer/> */}
-    </Router>
+      
+    {/* // </Router> */}
+    </>
   );
 };
 

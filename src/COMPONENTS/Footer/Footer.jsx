@@ -1,41 +1,62 @@
-import React from 'react'
+import React from "react";
+import "./Footer.css";
 import {
   BrowserRouter as Router,
-  Route,
   NavLink,
-  Routes,
+ 
 } from "react-router-dom";
-import "./Footer.css"
+
 
 const Footer = () => {
   return (
-    <Router>
-           <>
-    <div className="Footer-parent">
-      <div className="Child1">
-        <h2>THE SIREN</h2>
-      </div>
-      <div className="Child2">
-        <NavLink to='/Home'><h2>HOME</h2></NavLink>
-        <NavLink to='/Hollywood'><h2>HOLLYWOOD</h2></NavLink>
-        <NavLink to="/Bollywood"><h2>BOLLYWOOD</h2></NavLink>
-      </div>
-      <div className="Child3">
-        <NavLink to="/Fitness"><h2>FITNESS</h2></NavLink>
-        <NavLink to="/Technology"><h2>TECHNOLOGY</h2></NavLink>
-        <NavLink to="/Sports"><h2>SPORTS</h2></NavLink>
-      </div>
-      <div className="Child4">
-        <h2><i class="fa-brands fa-instagram"></i></h2>
-        <h2><i class="fa-brands fa-stack-overflow"></i></h2>
-        <h2><i class="fa-brands fa-github"></i></h2>
-      </div>
-    </div>
+    <>
+      
+        <div className="Footer-Parent">
+          <div className="Footer-child-1">
+            <h2>The Siren</h2>
+          </div>
+          <div className="Footer-child-2">
+            <NavLink to="/">
+              <h2>Home</h2>
+            </NavLink>
+            <NavLink to="/Hollywood">
+              <h2>Hollywood</h2>
+            </NavLink>
+            <NavLink to="/Bollywood">
+              <h2>Bollywood</h2>
+            </NavLink>
+          </div>
+          <div className="Footer-child-3">
+            <NavLink to="/Fitness">
+              <h2>Fitness</h2>
+            </NavLink>
+            <NavLink to="/Technology">
+              <h2>Technology</h2>
+            </NavLink>
+            <NavLink to="/Sports">
+              <h2>Sports</h2>
+            </NavLink>
+          </div>
+          <div className="Footer-child-4">
+            <h2 > 
+              <a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              
+            </h2>
+            <h2>
+              <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+              
+            </h2>
+            <h2>
+              <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+             
+            </h2>
+          </div>
+        </div>
 
+      
+      
     </>
-    </Router>
-   
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

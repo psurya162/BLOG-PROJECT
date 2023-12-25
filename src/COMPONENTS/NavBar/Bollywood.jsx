@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Store } from "../../Store/Store";
 import { NavLink } from "react-router-dom";
 
-const Hollywood = () => {
+const Bollywood = () => {
   const { data } = useContext(Store);
 
   // Filter Bollywood data post
@@ -91,4 +91,4 @@ const Hollywood = () => {
   );
 };
 
-export default Hollywood;
+export default Bollywood;
